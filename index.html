@@ -1,259 +1,752 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SM Veyra Aura</title>
+<title>SM Veyra Aura | Beauty • Fashion • Lifestyle</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
     scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial,sans-serif;
-    background:#080808;
-    color:white;
+    background:#050505;
+    color:#fff;
+    font-family:Arial, sans-serif;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
+
 header{
     position:sticky;
     top:0;
-    z-index:999;
-    background:rgba(8,8,8,.97);
-    border-bottom:1px solid #333;
-    padding:18px 7%;
+    z-index:9999;
+
+    background:rgba(5,5,5,.96);
+
+    border-bottom:1px solid #c99b22;
+
+    padding:13px 5%;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
 
-.logo{
-    color:#d4af37;
-    font-size:25px;
+/* LOGO */
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-circle{
+    width:55px;
+    height:55px;
+
+    border:2px solid #e7b72d;
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#e7b72d;
+
+    font-family:Georgia,serif;
+    font-size:22px;
     font-weight:bold;
+
+    box-shadow:
+    0 0 12px rgba(231,183,45,.35);
+}
+
+.logo-text h1{
+    font-family:Georgia,serif;
+    font-size:24px;
+    color:#f0bf35;
+}
+
+.logo-text p{
+    font-size:8px;
+    letter-spacing:3px;
+    color:#ddd;
+    margin-top:3px;
 }
 
 nav a{
-    color:white;
+    color:#fff;
     text-decoration:none;
-    margin-left:18px;
+    margin-left:22px;
     font-size:14px;
 }
 
 nav a:hover{
-    color:#d4af37;
+    color:#e7b72d;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
+
 .hero{
-    min-height:80vh;
+
+    min-height:520px;
+
     display:flex;
-    justify-content:center;
     align-items:center;
-    text-align:center;
-    padding:40px 20px;
+    justify-content:center;
+
+    position:relative;
+
+    overflow:hidden;
 
     background:
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.9)),
-    url("product1.jpg");
-
-    background-size:cover;
-    background-position:center;
+    radial-gradient(circle at 70% 50%,
+    rgba(218,166,35,.20),
+    transparent 35%),
+    #050505;
 }
 
-.hero h1{
-    font-size:52px;
-    color:#d4af37;
+.hero:before{
+
+    content:"";
+
+    position:absolute;
+
+    width:750px;
+    height:750px;
+
+    border:2px solid rgba(220,170,35,.45);
+
+    border-radius:50%;
+
+    right:-180px;
+    top:-180px;
+
+    box-shadow:
+    0 0 40px rgba(220,170,35,.2);
+}
+
+.hero-content{
+
+    width:90%;
+    max-width:1100px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    gap:30px;
+
+    position:relative;
+    z-index:2;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.small-title{
+    color:#e7b72d;
+    letter-spacing:5px;
+    font-size:13px;
     margin-bottom:15px;
 }
 
-.hero p{
-    color:#ddd;
-    font-size:16px;
-    letter-spacing:3px;
+.hero h2{
+
+    font-family:Georgia,serif;
+
+    font-size:60px;
+
+    color:#e8b72d;
+
+    line-height:1.05;
+
+    margin-bottom:15px;
+}
+
+.hero-description{
+
+    font-size:18px;
+
+    letter-spacing:4px;
+
+    color:#eee;
+
     margin-bottom:30px;
 }
 
-.btn{
+.hero-image{
+
+    flex:1;
+
+    max-width:500px;
+
+    position:relative;
+}
+
+.hero-image img{
+
+    width:100%;
+
+    max-height:480px;
+
+    object-fit:contain;
+
+    filter:
+    drop-shadow(0 0 25px rgba(231,183,45,.35));
+
+}
+
+/* BUTTON */
+
+.gold-btn{
+
     display:inline-block;
-    padding:14px 28px;
-    background:#d4af37;
+
+    padding:15px 30px;
+
     color:#000;
+
+    background:linear-gradient(
+        135deg,
+        #f5cf50,
+        #c79618
+    );
+
+    border-radius:8px;
+
     text-decoration:none;
-    border-radius:30px;
+
     font-weight:bold;
+
+    box-shadow:
+    0 0 20px rgba(220,170,35,.25);
+
     transition:.3s;
 }
 
-.btn:hover{
-    background:white;
-    transform:scale(1.05);
+.gold-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:
+    0 0 30px rgba(220,170,35,.5);
 }
 
-/* SECTION */
-section{
-    padding:70px 7%;
+/* =========================
+   COLLECTION
+========================= */
+
+.collection{
+
+    padding:70px 5%;
+
+    background:#050505;
 }
 
-.title{
+.section-title{
+
     text-align:center;
+
     margin-bottom:40px;
 }
 
-.title h2{
-    color:#d4af37;
-    font-size:35px;
-    margin-bottom:10px;
-}
+.section-title h2{
 
-.title p{
-    color:#999;
-}
+    color:#e7b72d;
 
-/* PRODUCT */
-.product-area{
-    display:flex;
-    justify-content:center;
-}
+    font-family:Georgia,serif;
 
-.product{
-    width:100%;
-    max-width:430px;
-    background:#151515;
-    border:1px solid #292929;
-    border-radius:20px;
-    overflow:hidden;
-    transition:.3s;
-}
+    font-size:48px;
 
-.product:hover{
-    transform:translateY(-8px);
-    border-color:#d4af37;
-}
-
-.product-image{
-    width:100%;
-    height:500px;
-}
-
-.product-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.product-info{
-    padding:25px;
-}
-
-.brand{
-    color:#d4af37;
-    font-size:13px;
-    letter-spacing:2px;
     margin-bottom:8px;
 }
 
-.product h3{
-    font-size:27px;
-    margin-bottom:12px;
+.section-title p{
+    color:#aaa;
 }
 
-.description{
-    color:#aaa;
+
+/* FILTER BUTTONS */
+
+.filters{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:30px;
+}
+
+.filter{
+
+    padding:11px 22px;
+
+    border:1px solid #555;
+
+    border-radius:8px;
+
+    color:#ddd;
+
+    background:#111;
+}
+
+.filter.active{
+
+    background:linear-gradient(
+        135deg,
+        #f5cf50,
+        #c79618
+    );
+
+    color:#000;
+
+    border-color:#e7b72d;
+
+    font-weight:bold;
+}
+
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.product{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:35px;
+
+    padding:20px;
+
+    border:1px solid #c99b22;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #111,
+        #080808
+    );
+
+    box-shadow:
+    0 0 30px rgba(220,170,35,.10);
+}
+
+
+/* PRODUCT PHOTO */
+
+.product-photo{
+
+    min-height:500px;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    background:#111;
+
+    border:1px solid #6e5417;
+
+}
+
+.product-photo img{
+
+    width:100%;
+
+    height:100%;
+
+    min-height:500px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+
+/* PRODUCT INFO */
+
+.product-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    padding:20px;
+}
+
+.product-label{
+
+    display:inline-block;
+
+    width:max-content;
+
+    padding:8px 14px;
+
+    background:#e7b72d;
+
+    color:#000;
+
+    border-radius:7px;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    margin-bottom:15px;
+}
+
+.product-info h3{
+
+    font-size:38px;
+
+    margin-bottom:15px;
+}
+
+.product-info p{
+
+    color:#bbb;
+
     line-height:1.7;
-    font-size:14px;
-    margin-bottom:18px;
+
+    margin-bottom:20px;
 }
 
 .price{
-    color:#d4af37;
+
+    display:inline-block;
+
+    width:max-content;
+
+    padding:12px 25px;
+
+    background:linear-gradient(
+        135deg,
+        #f5cf50,
+        #c79618
+    );
+
+    color:#000;
+
     font-size:30px;
+
     font-weight:bold;
-    margin-bottom:20px;
+
+    border-radius:8px;
+
+    margin-bottom:25px;
 }
 
+
+/* SIZE */
+
 .size-title{
+
     margin-bottom:10px;
-    color:#ddd;
+
+    font-weight:bold;
 }
 
 .sizes{
+
     display:flex;
-    gap:8px;
-    margin-bottom:22px;
+
+    gap:10px;
+
+    margin-bottom:25px;
 }
 
 .size{
-    border:1px solid #555;
-    padding:8px 14px;
-    border-radius:6px;
-}
 
-.order{
-    width:100%;
+    min-width:48px;
+
+    padding:10px;
+
     text-align:center;
+
+    border:1px solid #755a18;
+
+    border-radius:7px;
+
+    color:#fff;
 }
 
-/* ABOUT */
-.about{
-    background:#111;
-    text-align:center;
-}
+.size:hover{
 
-.about p{
-    max-width:700px;
-    margin:auto;
-    color:#bbb;
-    line-height:1.8;
-}
+    background:#e7b72d;
 
-/* CONTACT */
-.contact{
-    text-align:center;
-}
-
-.contact p{
-    color:#aaa;
-    margin-bottom:20px;
-}
-
-.social{
-    display:inline-block;
-    margin:6px;
-    padding:12px 22px;
-    border:1px solid #d4af37;
-    border-radius:25px;
-    color:#d4af37;
-    text-decoration:none;
-    transition:.3s;
-}
-
-.social:hover{
-    background:#d4af37;
     color:#000;
 }
 
-/* FOOTER */
-footer{
-    background:#050505;
-    border-top:1px solid #222;
+
+/* ORDER */
+
+.order-btn{
+
+    width:100%;
+
+    padding:17px;
+
+    border-radius:8px;
+
     text-align:center;
-    padding:30px 15px;
+
+    text-decoration:none;
+
+    color:#000;
+
+    background:linear-gradient(
+        135deg,
+        #f5cf50,
+        #c79618
+    );
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.order-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 0 25px rgba(231,183,45,.4);
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features{
+
+    max-width:1100px;
+
+    margin:40px auto 0;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    border:1px solid #5e4815;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    background:#0b0b0b;
+}
+
+.feature{
+
+    padding:20px;
+
+    text-align:center;
+
+    border-right:1px solid #333;
+}
+
+.feature:last-child{
+    border-right:none;
+}
+
+.feature-icon{
+
+    font-size:25px;
+
+    color:#e7b72d;
+
+    margin-bottom:8px;
+}
+
+.feature h4{
+    margin-bottom:5px;
+}
+
+.feature p{
+
+    font-size:12px;
+
+    color:#999;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+
+    padding:70px 7%;
+
+    background:#0b0b0b;
+
+    text-align:center;
+}
+
+.about h2{
+
+    color:#e7b72d;
+
+    font-family:Georgia,serif;
+
+    font-size:38px;
+
+    margin-bottom:20px;
+}
+
+.about p{
+
+    max-width:750px;
+
+    margin:auto;
+
+    color:#bbb;
+
+    line-height:1.8;
+
+    font-size:16px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+
+    padding:70px 5%;
+
+    text-align:center;
+}
+
+.contact h2{
+
+    color:#e7b72d;
+
+    font-family:Georgia,serif;
+
+    font-size:42px;
+
+    margin-bottom:10px;
+}
+
+.contact-subtitle{
+
+    color:#999;
+
+    margin-bottom:30px;
+}
+
+.contact-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+}
+
+.contact-btn{
+
+    min-width:210px;
+
+    padding:15px 20px;
+
+    border:1px solid #e7b72d;
+
+    border-radius:10px;
+
+    color:white;
+
+    text-decoration:none;
+
+    background:#0d0d0d;
+
+    transition:.3s;
+}
+
+.contact-btn:hover{
+
+    background:#e7b72d;
+
+    color:#000;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    border-top:1px solid #6b5017;
+
+    background:#030303;
+
+}
+
+footer h3{
+
+    color:#e7b72d;
+
+    font-family:Georgia,serif;
+
+    margin-bottom:8px;
+}
+
+footer p{
+
     color:#777;
+
+    font-size:13px;
+
 }
 
-footer strong{
-    color:#d4af37;
-}
 
-/* MOBILE */
-@media(max-width:600px){
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
 
     header{
         flex-direction:column;
@@ -261,68 +754,176 @@ footer strong{
     }
 
     nav a{
-        margin:0 6px;
+        margin:0 7px;
         font-size:12px;
     }
 
-    .hero h1{
+    .hero{
+        padding:50px 20px;
+    }
+
+    .hero-content{
+
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+    .hero h2{
+        font-size:42px;
+    }
+
+    .hero-description{
+        font-size:13px;
+    }
+
+    .hero-image{
+        max-width:380px;
+    }
+
+    .section-title h2{
         font-size:38px;
     }
 
-    .hero p{
-        font-size:12px;
+    .product{
+
+        grid-template-columns:1fr;
+
+        padding:12px;
     }
 
-    .product-image{
+    .product-photo,
+    .product-photo img{
+
+        min-height:430px;
+
         height:430px;
     }
+
+    .product-info{
+        padding:15px;
+    }
+
+    .product-info h3{
+        font-size:28px;
+    }
+
+    .features{
+
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .feature:nth-child(2){
+        border-right:none;
+    }
+
+    .feature:nth-child(1),
+    .feature:nth-child(2){
+        border-bottom:1px solid #333;
+    }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- HEADER -->
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
 
-    <div class="logo">
-        SM Veyra Aura
+    <div class="logo-area">
+
+        <div class="logo-circle">
+            SM
+        </div>
+
+        <div class="logo-text">
+
+            <h1>SM Veyra Aura</h1>
+
+            <p>
+                BEAUTY • FASHION • LIFESTYLE
+            </p>
+
+        </div>
+
     </div>
 
+
     <nav>
+
         <a href="#home">Home</a>
+
         <a href="#products">Shop</a>
+
         <a href="#about">About</a>
+
         <a href="#contact">Contact</a>
+
     </nav>
 
 </header>
 
 
-<!-- HOME -->
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero" id="home">
 
-    <div>
+    <div class="hero-content">
 
-        <h1>SM Veyra Aura</h1>
+        <div class="hero-text">
 
-        <p>
-            BEAUTY • FASHION • LIFESTYLE
-        </p>
+            <div class="small-title">
+                PREMIUM QUALITY
+            </div>
 
-        <a href="#products" class="btn">
-            SHOP NOW
-        </a>
+            <h2>
+                SM Veyra Aura
+            </h2>
+
+            <div class="hero-description">
+                BEAUTY • FASHION • LIFESTYLE
+            </div>
+
+            <a href="#products" class="gold-btn">
+                Explore Collection →
+            </a>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <img
+                src="IMG-20260826-WA0239.jpg"
+                alt="SM Veyra Aura Shirt"
+            >
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- PRODUCTS -->
-<section id="products">
 
-    <div class="title">
+<!-- =========================
+     COLLECTION
+========================= -->
+
+<section class="collection" id="products">
+
+    <div class="section-title">
 
         <h2>Our Collection</h2>
 
@@ -333,64 +934,179 @@ footer strong{
     </div>
 
 
-    <div class="product-area">
+    <div class="filters">
 
-        <div class="product">
+        <div class="filter active">
+            All Products
+        </div>
 
-            <!-- তোমার দেওয়া শার্টের ছবি -->
-            <div class="product-image">
+        <div class="filter">
+            👕 Shirt
+        </div>
 
-                <img
-                    src="product1.jpg"
-                    alt="Premium Printed Shirt"
-                >
+        <div class="filter">
+            T-Shirt
+        </div>
+
+        <div class="filter">
+            👖 Pant
+        </div>
+
+        <div class="filter">
+            Others
+        </div>
+
+    </div>
+
+
+    <!-- PRODUCT -->
+
+    <div class="product">
+
+
+        <!-- IMAGE -->
+
+        <div class="product-photo">
+
+            <img
+                src="IMG-20260826-WA0239.jpg"
+                alt="Floral Stripe Premium Shirt"
+            >
+
+        </div>
+
+
+        <!-- INFORMATION -->
+
+        <div class="product-info">
+
+            <div class="product-label">
+                SM VEYRA AURA
+            </div>
+
+
+            <h3>
+                Floral Stripe Premium Shirt
+            </h3>
+
+
+            <p>
+
+                Stylish and comfortable premium
+                printed shirt. Perfect for casual
+                and modern looks.
+
+            </p>
+
+
+            <div class="price">
+                ৳600
+            </div>
+
+
+            <div class="size-title">
+                Available Sizes:
+            </div>
+
+
+            <div class="sizes">
+
+                <div class="size">M</div>
+
+                <div class="size">L</div>
+
+                <div class="size">XL</div>
+
+                <div class="size">XXL</div>
 
             </div>
 
 
-            <div class="product-info">
+            <!-- WHATSAPP ORDER -->
 
-                <div class="brand">
-                    SM VEYRA AURA
-                </div>
+            <a
+                class="order-btn"
+                href="https://wa.me/8801603522169?text=Assalamu%20Alaikum,%20আমি%20Floral%20Stripe%20Premium%20Shirt%20অর্ডার%20করতে%20চাই।%20দাম%20৳600"
+            >
 
-                <h3>
-                    Premium Printed Shirt
-                </h3>
+                🛒 Order Now →
 
-                <p class="description">
-                    Stylish and comfortable premium printed
-                    shirt. Perfect for casual and modern looks.
-                </p>
+            </a>
 
-                <!-- PRICE -->
-                <div class="price">
-                    ৳600
-                </div>
+        </div>
+
+    </div>
 
 
-                <!-- SIZE -->
-                <div class="size-title">
-                    Available Sizes
-                </div>
 
-                <div class="sizes">
-                    <span class="size">M</span>
-                    <span class="size">L</span>
-                    <span class="size">XL</span>
-                    <span class="size">XXL</span>
-                </div>
+    <!-- FEATURES -->
 
+    <div class="features">
 
-                <!-- WHATSAPP ORDER -->
-                <a
-                    class="btn order"
-                    href="https://wa.me/8801603522169?text=Assalamu%20Alaikum,%20আমি%20Premium%20Printed%20Shirt%20অর্ডার%20করতে%20চাই।%20দাম:%20৳600"
-                >
-                    🛒 ORDER NOW
-                </a>
+        <div class="feature">
 
+            <div class="feature-icon">
+                🚚
             </div>
+
+            <h4>
+                Fast Delivery
+            </h4>
+
+            <p>
+                All Over Bangladesh
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🛡️
+            </div>
+
+            <h4>
+                Quality
+            </h4>
+
+            <p>
+                Premium Products
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ↩️
+            </div>
+
+            <h4>
+                Easy Return
+            </h4>
+
+            <p>
+                Customer Friendly
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🎧
+            </div>
+
+            <h4>
+                Support
+            </h4>
+
+            <p>
+                Always Here
+            </p>
 
         </div>
 
@@ -399,96 +1115,129 @@ footer strong{
 </section>
 
 
-<!-- ABOUT -->
+
+<!-- =========================
+     ABOUT
+========================= -->
+
 <section class="about" id="about">
 
-    <div class="title">
-
-        <h2>About Us</h2>
-
-    </div>
+    <h2>
+        About SM Veyra Aura
+    </h2>
 
     <p>
 
-        Welcome to <strong>SM Veyra Aura</strong>.
+        Welcome to SM Veyra Aura —
+        your destination for modern fashion,
+        beauty and lifestyle products.
 
-        We bring you stylish beauty, fashion and
-        lifestyle products with a modern and elegant touch.
-
-        Our goal is to provide quality products
-        at an affordable price.
+        We believe style should be simple,
+        elegant and affordable.
 
     </p>
 
 </section>
 
 
-<!-- CONTACT -->
+
+<!-- =========================
+     CONTACT
+========================= -->
+
 <section class="contact" id="contact">
 
-    <div class="title">
+    <h2>
+        Connect With Us
+    </h2>
 
-        <h2>Connect With Us</h2>
+    <p class="contact-subtitle">
+        Follow us and stay connected
+    </p>
 
-        <p>
-            যোগাযোগ ও অর্ডারের জন্য আমাদের সাথে যোগাযোগ করুন
-        </p>
+
+    <div class="contact-buttons">
+
+
+        <!-- WHATSAPP -->
+
+        <a
+            class="contact-btn"
+            href="https://wa.me/8801603522169"
+        >
+
+            🟢 WhatsApp
+            <br>
+            01603522169
+
+        </a>
+
+
+        <!-- FACEBOOK -->
+
+        <a
+            class="contact-btn"
+            href="https://www.facebook.com/profile.php?id=61593575402256"
+            target="_blank"
+        >
+
+            🔵 Facebook
+            <br>
+            SM Veyra Aura
+
+        </a>
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+            class="contact-btn"
+            href="https://www.instagram.com/sm.sahidulislam"
+            target="_blank"
+        >
+
+            🟣 Instagram
+            <br>
+            @sm.sahidulislam
+
+        </a>
+
+
+        <!-- EMAIL -->
+
+        <a
+            class="contact-btn"
+            href="mailto:smsahidul2025@gmail.com"
+        >
+
+            ✉️ Email
+            <br>
+            smsahidul2025@gmail.com
+
+        </a>
 
     </div>
-
-
-    <!-- WHATSAPP -->
-    <a
-        class="social"
-        href="https://wa.me/8801603522169"
-    >
-        WhatsApp
-    </a>
-
-
-    <!-- FACEBOOK -->
-    <a
-        class="social"
-        href="https://www.facebook.com/profile.php?id=61593575402256"
-        target="_blank"
-    >
-        Facebook
-    </a>
-
-
-    <!-- INSTAGRAM -->
-    <a
-        class="social"
-        href="https://www.instagram.com/sm.sahidulislam"
-        target="_blank"
-    >
-        Instagram
-    </a>
-
-
-    <!-- EMAIL -->
-    <a
-        class="social"
-        href="mailto:smsahidul2025@gmail.com"
-    >
-        Email
-    </a>
 
 </section>
 
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-    <p>
-        © 2026 <strong>SM Veyra Aura</strong>
-    </p>
+    <h3>
+        © 2026 SM Veyra Aura
+    </h3>
 
     <p>
         BEAUTY • FASHION • LIFESTYLE
     </p>
 
 </footer>
+
 
 </body>
 </html>
